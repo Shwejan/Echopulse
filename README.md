@@ -49,6 +49,7 @@ EchoPulse is an interactive Streamlit app that analyzes YouTube comments to gene
    ```bash
    source venv/bin/activate       # Linux/macOS
    ```  
+   **For Windows users**
    ```bash
    venv\Scripts\activate        # Windows
    ```
