@@ -92,13 +92,7 @@ When you’re done, clean up resources:
 ./docker-cleanup.sh
 ```
 
----
-
-*Happy analyzing with EchoPulse!*  
-
-
 - **Enter** a YouTube video URL in the input box  
-- **Adjust** toxicity threshold and number of topic clusters via the sidebar  
 - **Click** “🚀 Analyze Video” to start processing  
 
 The app will display:
@@ -108,19 +102,3 @@ The app will display:
 - Sentiment distribution pie chart  
 - Top discussion topics and sample comments  
 
-## 🛠 Troubleshooting
-
-If you encounter build errors or model-loading crashes on Windows:
-
-1. Open **Environment Variables**  
-2. Go to **Performance → Settings → Advanced → Virtual Memory → Change**  
-3. **Uncheck** “Automatically manage paging file size”  
-4. Set **Custom size**:  
-   - Initial and maximum size: 15 000–20 000 MB  
-5. **Restart** your PC  
-
-This increases your system’s paging file to accommodate large model offloads.
-
----
-
-*Happy analyzing!*  
