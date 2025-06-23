@@ -23,48 +23,79 @@ EchoPulse is an interactive Streamlit app that analyzes YouTube comments to gene
 - **Interactive Dashboard**  
   Built with Streamlit: dynamic metrics, charts, and expandable topic views.
 
-## 📦 Prerequisites
+## Prerequisites
 
-- **Python ≥ 3.8**  
-- **Git**  
-- **At least 14–18 GB of free disk space** (for model weights and offload folders)  
-- **Windows users** may need to adjust virtual memory to load models (see Troubleshooting).
+Before you begin, ensure you have the following:
 
-## 🔧 Installation
+1. **Git**: [Install Git](https://git-scm.com/).
+2. **Docker**: [Install Docker](https://www.docker.com/).
+3. **Linux/macOS**: No extra setup needed.
+4. **Windows**: Install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and enable Docker’s WSL integration as per [Docker’s guide](https://docs.docker.com/desktop/windows/wsl/).
 
-1. **Navigate to your desired parent directory**  
-   ```bash
-   cd /path/to/your/projects
-   ```
-2. **Clone the repository**  
-   ```bash
-   git clone https://github.com/DrAlzahraniInternships/youtube-comments-insights
-   cd youtube-comments-insights
-   ```
-3. **Create & activate a virtual environment** (optional but recommended)  
-   ```bash
-   python -m venv venv
-   ```
-   **For Linux & MacOS users**
-   ```bash
-   source venv/bin/activate       # Linux/macOS
-   ```  
-   **For Windows users**
-   ```bash
-   venv\Scripts\activate        # Windows
-   ```
-4. **Install Python dependencies**  
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-## ▶️ Usage
+### Step 1: Remove the existing code directory completely
 
-Run the app with Streamlit:
+If your local EchoPulse folder is out-of-date or corrupted, remove it first:
 
 ```bash
-streamlit run echopulse.py
+rm -rf EchoPulse
 ```
+
+### Step 2: Clone the Repository
+
+Clone the EchoPulse GitHub repository:
+
+```bash
+git clone https://github.com/Shwejan/EchoPulse.git
+```
+
+### Step 3: Navigate to the Repository
+
+```bash
+cd EchoPulse
+```
+
+### Step 4: Pull the Latest Version
+
+```bash
+git pull origin main
+```
+
+### Step 5: Make Docker Scripts Executable
+
+```bash
+chmod +x docker-launch.sh docker-cleanup.sh
+```
+
+### Step 6: Build and Run the Docker Container
+
+```bash
+./docker-launch.sh
+```
+
+### Step 7: Access EchoPulse
+
+Open your browser to:
+
+```
+http://localhost:8501
+```
+
+The Streamlit app will be running on port 8501.
+
+### Step 8: Stop and Remove the Docker Container
+
+When you’re done, clean up resources:
+
+```bash
+./docker-cleanup.sh
+```
+
+---
+
+*Happy analyzing with EchoPulse!*  
+
 
 - **Enter** a YouTube video URL in the input box  
 - **Adjust** toxicity threshold and number of topic clusters via the sidebar  
