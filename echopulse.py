@@ -31,7 +31,7 @@ warnings.filterwarnings('ignore')
 toxicity_pipe = pipeline(
     "text-classification",
     model="unitary/toxic-bert",
-    return_all_scores=True
+    return_all_scores=True,
     device=-1  
 )
 
