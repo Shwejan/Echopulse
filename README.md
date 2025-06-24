@@ -34,7 +34,7 @@ Before you begin, ensure you have the following:
 
 ---
 
-### Step 1: Remove the existing code directory completely
+### Step 1: (Optional) Remove the existing code directory completely if any issue occurs while cloning 
 
 If your local EchoPulse folder is out-of-date or corrupted, remove it first:
 
